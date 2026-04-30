@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluently Academy | Inglés con Confianza y Mentalidad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --accent: #f472b6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-weight: 700; color: var(--primary); font-size: 1.6rem; letter-spacing: -1px; }
+        .nav-links { list-style: none; display: flex; gap: 25px; align-items: center; margin: 0; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        header {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+        header h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+
+        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+
+        .highlight-box {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            margin-top: -80px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+        .highlight-box h2 { color: var(--secondary); font-size: 2rem; }
+        .highlight-box p { font-size: 1.1rem; color: #555; }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .value-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+        .value-card h3 { color: var(--primary); margin-top: 0; }
+
+        .social-section {
+            background: #f1f5f9;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .social-icons { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
+        .social-btn {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .social-btn.ig:hover { background: #e1306c; color: white; }
+        .social-btn.yt:hover { background: #ff0000; color: white; }
+
+        .booking-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        .button {
+            display: inline-block;
+            background: var(--accent);
+            color: white !important;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(244, 114, 182, 0.4);
+        }
+        .button:hover { transform: scale(1.05); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .footer-links a { color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        .footer-links a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Fluently Academy</div>
+        <ul class="nav-links">
+            <li><a href="#about">¿Por qué nosotros?</a></li>
+            <li><a href="#booking">Reserva 1:1</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li>
+                <!-- SELECTOR DE IDIOMA PARA SPANISH.HTML -->
+                <select style="border: none; background: transparent; font-weight: 600; cursor: pointer;" onchange="location = this.value;">
+                    <option value="spanish.html">🇪🇸 ES</option>
+                    <option value="index.html">🇬🇧 EN</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Habla Inglés, <br>Transforma tu Vida</h1>
+        <p>Coaching experto 1:1 enfocado en el control emocional, el positivismo y una confianza inquebrantable.</p>
+        <a href="#booking" class="button">Empieza tu Viaje</a>
+    </header>
+
+    <div class="container">
+        <section id="about" class="highlight-box">
+            <h2>Más allá de la gramática</h2>
+            <p>
+                En Fluently Academy no solo enseñamos inglés; formamos <strong>comunicadores seguros de sí mismos</strong>. 
+                Utilizamos un sistema único de control emocional y refuerzo positivo. 
+                ¿Por qué? Porque el miedo es la mayor barrera para la fluidez. Al dominar tus emociones, 
+                desbloqueas una habilidad que te ayudará no solo con el inglés, sino en todos los ámbitos de tu vida.
+            </p>
+        </section>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Mentalidad Primero</h3>
+                <p>Trabajamos los bloqueos psicológicos que te impiden hablar. Gana el valor para cometer errores y aprender de ellos.</p>
+            </div>
+            <div class="value-card">
+                <h3>Coaching 1:1 Personalizado</h3>
+                <p>Sesiones privadas adaptadas a tus necesidades profesionales o personales. 100% enfocado en tu crecimiento.</p>
+            </div>
+            <div class="value-card">
+                <h3>Ambiente Positivo</h3>
+                <p>Nuestro método se basa en el apoyo y el optimismo. Te sentirás seguro/a, motivado/a y empoderado/a en cada lección.</p>
+            </div>
+        </div>
+
+        <section class="social-section">
+            <h3>Únete a nuestra Comunidad</h3>
+            <p>Consejos diarios e inspiración para tu camino con el inglés.</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/academyfluently" class="social-btn ig">Instagram</a>
+                <a href="https://youtube.com/@FluentlyAcademy" class="social-btn yt">YouTube</a>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2 style="text-align: center; margin-bottom: 30px;">Reserva tu Sesión 1:1</h2>
+            <div class="booking-card">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/fluentlyacademy/schedule" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top: 80px; text-align: center;">
+            <h2>Hablemos</h2>
+            <p>Envíanos un mensaje si tienes preguntas sobre nuestro coaching.</p>
+            <form action="https://formspree.io/f/mgodwgbb" method="POST" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" name="name" placeholder="Nombre completo" required style="padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <input type="email" name="email" placeholder="Correo electrónico" required style="padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <textarea name="message" placeholder="¿Cómo podemos ayudarte?" rows="4" style="padding: 15px; border-radius: 10px; border: 1px solid #ddd;"></textarea>
+                <button type="submit" class="button" style="border:none; cursor:pointer; width: 100%;">Enviar Mensaje</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Fluently Academy | Construyendo confianza en todo el mundo</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacidad</a>
+            <a href="terms.html">Términos</a>
+            <a href="rules.html">Reglas de la Comunidad</a>
+        </div>
+    </footer>
+
+</body>
+</html>
