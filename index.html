@@ -3,22 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Learning Website</title>
-    <meta name="description" content="A website where I practice coding, SEO, and data analytics.">
+    <title>Fluently Academy | Learn English Online</title>
+    <meta name="description" content="Learn English online with expert lessons, interactive courses, live classes, and a supportive learning community at Fluently Academy.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f0f7ff, #ffffff);
+        }
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #1e293b;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>Learning coding, SEO, and analytics one step at a time.</p>
+        <h1>Fluently Academy</h1>
+        <p>Learn English with confidence, community, and expert support.</p>
+        <a href="#courses" class="button">Explore Courses</a>
     </header>
 
-    <main>
-        <h2>What I'm Learning</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>SEO</li>
-            <li>Data Analytics</li>
-        </ul>
-    </main>
+    <div class="container">
+        <section>
+            <h2>Welcome to Fluently Academy</h2>
+            <p>
+                Fluently Academy helps English learners improve their skills through engaging online courses,
+                personalised lessons, and a supportive global community.
+            </p>
+        </section>
+
+        <section class="grid" id="courses">
+            <div class="card">
+                <h3>Online Courses</h3>
+                <p>Self-paced English courses designed to help you improve grammar, vocabulary, speaking, and confidence.</p>
+            </div>
+
+            <div class="card">
+                <h3>1:1 English Lessons</h3>
+                <p>Book private online lessons via Google Meet for personalised support and faster progress.</p>
+            </div>
+
+            <div class="card">
+                <h3>Community Learning</h3>
+                <p>Join our Google Chat community to practise English, ask questions, and connect with other learners.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>English Learning Blog</h2>
+            <p>
+                Discover practical tips, grammar guides, vocabulary lessons, and strategies to help you become a more confident English speaker.
+            </p>
+            <a href="#" class="button">Read the Blog</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Fluently Academy. All rights reserved.</p>
+    </footer>
 </body>
 </html>
