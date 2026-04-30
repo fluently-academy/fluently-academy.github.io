@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Fluently Academy | Coaching de Inglês e Confiança</title>
+    <meta name="description" content="Domine o inglês com a Fluently Academy. Coaching particular 1:1 focado em controle emocional e confiança inabalável.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2563eb; --secondary: #7c3aed; --accent: #f472b6; --dark: #1e293b; --light: #f8fafc; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; line-height: 1.6; color: #333; background-color: var(--light); scroll-behavior: smooth; }
+        
+        nav { 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 8px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+
+        .logo-container img {
+            height: 55px;
+            width: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .nav-links { list-style: none; display: flex; gap: 25px; align-items: center; margin: 0; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; }
+        
+        header { text-align: center; padding: 120px 20px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; clip-path: ellipse(150% 100% at 50% 0%); }
+        header h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+        .highlight-box { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); margin-top: -80px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
+        .value-card { background: #fff; padding: 30px; border-radius: 15px; border-left: 4px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .button { display: inline-block; background: var(--accent); color: white !important; padding: 16px 32px; text-decoration: none; border-radius: 50px; font-weight: 700; text-transform: uppercase; transition: 0.3s; border: none; cursor: pointer; }
+        .button:hover { transform: scale(1.05); }
+        footer { background: var(--dark); color: white; padding: 60px 20px; text-align: center; }
+        .footer-links a { color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="portuguese.html" class="logo-container">
+            <img src="logo.png" alt="Fluently Academy Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">Por que nós?</a></li>
+            <li><a href="#booking">Agendar 1:1</a></li>
+            <li>
+                <select style="border: none; background: transparent; font-weight: 600; cursor: pointer;" onchange="location = this.value;">
+                    <option value="portuguese.html">🇧🇷 PT</option>
+                    <option value="index.html">🇬🇧 EN</option>
+                    <option value="spanish.html">🇪🇸 ES</option>
+                    <option value="french.html">🇫🇷 FR</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Fale Inglês, <br>Transforme sua Vida</h1>
+        <p>Coaching especializado 1:1 focado em controle emocional e confiança inabalável.</p>
+        <a href="#booking" class="button">Comece sua Jornada</a>
+    </header>
+
+    <div class="container">
+        <section id="about" class="highlight-box">
+            <h2>Muito além da gramática</h2>
+            <p>Na Fluently Academy, formamos <strong>comunicadores confiantes</strong>. O medo é a maior barreira para a fluência; ao dominar suas emoções, você libera seu verdadeiro potencial.</p>
+        </section>
+
+        <div class="values-grid">
+            <div class="value-card"><h3>Mentalidade Primeiro</h3><p>Supere os bloqueios psicológicos que te impedem de falar inglês com naturalidade.</p></div>
+            <div class="value-card"><h3>Coaching 1:1 Personalizado</h3><p>Sessões adaptadas exatamente aos seus objetivos de crescimento profissional e pessoal.</p></div>
+            <div class="value-card"><h3>Energia Positiva</h3><p>Um espaço seguro onde cometer erros é celebrado como parte essencial do aprendizado.</p></div>
+        </div>
+
+        <section id="booking" style="text-align: center;">
+            <h2 style="margin-bottom: 30px;">Reserve sua Sessão</h2>
+            <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/fluentlyacademy/schedule" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top: 80px; text-align: center;">
+            <h2>Vamos Conversar</h2>
+            <form action="https://formspree.io/f/mgodwgbb" method="POST" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" name="name" placeholder="Nome Completo" required style="padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <input type="email" name="email" placeholder="E-mail" required style="padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <textarea name="message" placeholder="Como podemos te ajudar?" rows="4" style="padding: 15px; border-radius: 10px; border: 1px solid #ddd;"></textarea>
+                <button type="submit" class="button" style="width: 100%;">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Fluently Academy | Construindo Confiança no Mundo Inteiro</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacidade</a>
+            <a href="terms.html">Termos</a>
+            <a href="rules.html">Regras</a>
+        </div>
+    </footer>
+</body>
+</html>
