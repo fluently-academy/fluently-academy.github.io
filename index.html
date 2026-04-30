@@ -3,106 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluently Academy | Build Your Fluency and Confidence</title>
-    <meta name="description" content="Learn English online with expert lessons, 1:1 coaching, and a supportive community at Fluently Academy.">
+    <title>Fluently Academy | Build Your Fluency</title>
     <style>
-        /* ESTILOS ORIGINALES Y NUEVOS */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f0f7ff, #ffffff);
-        }
-
-        /* Navegación */
-        nav {
-            background: white;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        /* Estilos base */
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; line-height: 1.6; color: #333; background: #f0f7ff; }
+        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
         .logo { font-weight: bold; color: #2563eb; font-size: 1.5rem; }
-        .nav-links { list-style: none; display: flex; gap: 20px; align-items: center; }
+        .nav-links { list-style: none; display: flex; gap: 20px; align-items: center; margin: 0; padding: 0; }
         .nav-links a { text-decoration: none; color: #333; font-weight: 500; }
-        .lang-select { padding: 5px; border-radius: 5px; border: 1px solid #ccc; }
-
-        header {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            color: white;
-        }
-        h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        
-        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        .card:hover { transform: translateY(-5px); }
-
-        .button {
-            display: inline-block;
-            background: #2563eb;
-            color: white !important;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Secciones Nuevas */
-        .section-title { text-align: center; margin-bottom: 40px; }
-        .booking-container { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        
-        /* Acordeón FAQ */
-        .faq-item { margin-bottom: 10px; border-bottom: 1px solid #eee; }
-        details { padding: 15px 0; cursor: pointer; }
-        summary { font-weight: bold; font-size: 1.1rem; list-style: none; }
-
-        /* Formulario */
-        .contact-form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto; }
-        .contact-form input, .contact-form textarea { padding: 12px; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box; }
-
-        footer {
-            background: #1e293b;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto 30px auto;
-            text-align: left;
-        }
-        .footer-links a { color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 8px; }
-        .social-icons a { color: white; margin-right: 15px; font-size: 1.2rem; text-decoration: none; }
+        header { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #2563eb, #7c3aed); color: white; }
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 40px 0; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .button { display: inline-block; background: #2563eb; color: white !important; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+        footer { background: #1e293b; color: white; padding: 40px 20px; text-align: center; margin-top: 50px; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        /* FAQ */
+        details { background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; cursor: pointer; border: 1px solid #e2e8f0; }
+        summary { font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <!-- NAVEGACIÓN -->
     <nav>
         <div class="logo">Fluently Academy</div>
         <ul class="nav-links">
@@ -111,121 +33,80 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
-                <select class="lang-select" onchange="location = this.value;">
+                <select onchange="location = this.value;">
                     <option value="/">🇬🇧 English</option>
                     <option value="/es/">🇪🇸 Español</option>
-                    <option value="/it/">🇮🇹 Italiano</option>
-                    <option value="/fr/">🇫🇷 Français</option>
                 </select>
             </li>
         </ul>
     </nav>
 
-    <header id="home">
+    <header>
         <h1>Fluently Academy</h1>
         <p>Build Your Fluency and Confidence in English</p>
-        <a href="#booking" class="button">Book a Free Trial</a>
+        <a href="#booking" class="button">Book Your Lesson</a>
     </header>
 
     <div class="container">
-        <!-- WELCOME -->
-        <section style="text-align: center; margin-bottom: 80px;">
-            <h2>Welcome to Fluently Academy</h2>
-            <p style="max-width: 800px; margin: auto; font-size: 1.2rem;">
-                Helping adults, children, and professionals worldwide unlock their potential through personalised 1:1 coaching and dynamic group sessions.
-            </p>
-        </section>
-
-        <!-- SERVICES / COURSES -->
         <section id="courses">
-            <h2 class="section-title">Our Services</h2>
+            <h2 style="text-align:center">Our Learning Options</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>1:1 Private Lessons</h3>
-                    <p>Personalised support via Google Meet to focus on your specific goals and faster progress.</p>
+                    <h3>1:1 Lessons</h3>
+                    <p>Personalised speaking practice via Google Meet. Tailored to your goals.</p>
                 </div>
                 <div class="card">
-                    <h3>Group Conversation</h3>
-                    <p>Dynamic group classes to build confidence and fluency in a real-world setting.</p>
+                    <h3>Group Classes</h3>
+                    <p>Interactive sessions to build confidence in a social environment.</p>
                 </div>
                 <div class="card">
-                    <h3>Community Hub</h3>
-                    <p>Access our Google Chat group for English-only practice and a supportive atmosphere.</p>
+                    <h3>Community</h3>
+                    <p>Join our English-only Google Chat for daily practice and support.</p>
                 </div>
             </div>
         </section>
 
-        <!-- BOOKING SYSTEM -->
-        <section id="booking" style="margin-top: 80px;">
-            <h2 class="section-title">Reserve Your Spot</h2>
-            <div class="booking-container">
-                <!-- REEMPLAZA EL LINK ABAJO CON TU LINK DE CALENDLY -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_LINK" style="min-width:320px;height:630px;"></div>
+        <!-- CALENDLY INTEGRADO -->
+        <section id="booking" style="margin-top: 60px;">
+            <h2 style="text-align:center">Choose Your Date & Time</h2>
+            <div style="background: white; border-radius: 15px; padding: 10px;">
+                <!-- Widget de Calendly con TU link -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/fluentlyacademy/schedule" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
         </section>
 
-        <!-- FAQ SECTION -->
-        <section id="faq" style="margin-top: 80px;">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <details>
-                    <summary>What is your cancellation policy?</summary>
-                    <p>Lessons cancelled less than 24 hours in advance are non-refundable. If the academy cancels, we will refund and reschedule your session.</p>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>What are the community rules?</summary>
-                    <p>Our Google Chat is a respectful, English-only practice space. No spam or advertising is allowed.</p>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>Do you offer refunds for courses?</summary>
-                    <p>Please contact us regarding course refunds. Generally, we offer a satisfaction period if you have not completed more than 20% of the content.</p>
-                </details>
-            </div>
+        <section id="faq" style="margin-top: 60px;">
+            <h2 style="text-align:center">Common Questions</h2>
+            <details>
+                <summary>How do I pay for my lessons?</summary>
+                <p>Once you book a slot, you will receive payment instructions. We currently accept PayPal and bank transfers. Lessons must be paid 24h in advance.</p>
+            </details>
+            <details>
+                <summary>What is the cancellation policy?</summary>
+                <p>Lessons cancelled with less than 24 hours' notice are non-refundable. If the teacher cancels, you get a full refund.</p>
+            </details>
         </section>
 
-        <!-- CONTACT FORM -->
-        <section id="contact" style="margin-top: 80px;">
-            <h2 class="section-title">Get in Touch</h2>
-            <!-- REEMPLAZA EL LINK CON TU ID DE FORMSPREE -->
-            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
-                <button type="submit" class="button">Send Message</button>
+        <section id="contact" style="margin-top: 60px; text-align: center;">
+            <h2>Contact Us</h2>
+            <p>Questions? Send us a message!</p>
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 10px;">
+                <input type="text" name="name" placeholder="Name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                <input type="email" name="email" placeholder="Email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                <textarea name="message" placeholder="Message" rows="4" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                <button type="submit" class="button" style="border:none; cursor:pointer;">Send</button>
             </form>
         </section>
     </div>
 
     <footer>
-        <div class="footer-grid">
-            <div>
-                <h3>Fluently Academy</h3>
-                <p>Build your fluency and confidence in English with expert support.</p>
-                <div class="social-icons">
-                    <a href="https://instagram.com/academyfluently">Instagram</a>
-                    <a href="https://youtube.com/@FluentlyAcademy">YouTube</a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Support</h4>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
-                <a href="https://chat.google.com/">Google Chat Community</a>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
-                <a href="rules.html">Community Rules</a>
-            </div>
+        <p>© 2026 Fluently Academy</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="https://instagram.com/academyfluently">Instagram</a>
         </div>
-        <hr style="border: 0; border-top: 1px solid #334155; margin-bottom: 20px;">
-        <p>© 2026 Fluently Academy. All rights reserved.</p>
     </footer>
 
 </body>
